@@ -78,7 +78,7 @@ public class PostService {
                 .orElseThrow(() -> new RuntimeException("Post not found"));
 
         if (!post.getUserId().equals(userId)) {
-            throw new RuntimeException("User not authorized to delete this post");
+            throw new RuntimeException("User is not authorized to delete this post");
         }
 
         postRepository.delete(post);
