@@ -15,7 +15,7 @@ const Sidebar = () => {
   return (
     <nav className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg p-4 flex flex-col">
       <div className="flex items-center justify-center mb-8">
-        <h1 className="text-2xl font-bold text-primary">UpSkillHub</h1>
+        <h1 className="text-2xl font-bold text-primary">KitchenHub.lk</h1>
       </div>
 
       <div className="space-y-4 flex-grow">

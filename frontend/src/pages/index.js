@@ -37,7 +37,7 @@ const LandingPage = () => {
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Unlock Your Potential with
-              <span className="text-primary block mt-2">UpSkillHub</span>
+              <span className="text-primary block mt-2">KitchenHub.lk</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8">
               Join our community of learners and experts. Share knowledge, grow skills, and achieve your goals together.
@@ -82,7 +82,7 @@ const LandingPage = () => {
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            Why Choose UpSkillHub?
+            Why Choose KitchenHub.lk?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
