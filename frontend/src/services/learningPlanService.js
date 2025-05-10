@@ -13,7 +13,7 @@ const getYouTubeVideoId = (url) => {
 // Function to get YouTube thumbnail URL
 const getYouTubeThumbnail = (videoId) => {
   if (!videoId) return null; // Or return a default thumbnail URL
-  return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`; // Medium quality thumbnail
+  return `https://img.facebook.com/vi/${videoId}/mqdefault.jpg`; // Medium quality thumbnail
 };
 
 const createLearningPlan = async (planData) => {
