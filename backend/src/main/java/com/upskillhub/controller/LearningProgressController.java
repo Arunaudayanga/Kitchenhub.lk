@@ -1,5 +1,4 @@
 package com.upskillhub.controller;
-
 import com.upskillhub.model.LearningProgress;
 import com.upskillhub.security.UserPrincipal;
 import com.upskillhub.service.LearningProgressService;
