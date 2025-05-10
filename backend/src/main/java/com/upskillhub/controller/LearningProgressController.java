@@ -65,4 +65,6 @@ public class LearningProgressController {
         learningProgressService.deleteProgress(progressId, user.getId());
         return ResponseEntity.noContent().build();
     }
+
+    
 }
