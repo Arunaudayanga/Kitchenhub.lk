@@ -11,9 +11,8 @@ const LearningPlansPage = () => {
   const handlePlanCreated = (newPlan) => {
     console.log('New plan created:', newPlan);
     // Increment key to trigger re-fetch in LearningPlanList
-    // Note: LearningPlanList currently fetches on mount/page change.
-    // A more robust solution might involve passing the new plan directly
-    // or using a global state management library.
+  
+  
     setRefreshKey(prevKey => prevKey + 1);
   };
 
