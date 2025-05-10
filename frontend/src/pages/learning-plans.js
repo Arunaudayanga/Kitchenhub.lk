@@ -6,12 +6,12 @@ import LearningPlanList from '../components/plan/LearningPlanList';
 
 const LearningPlansPage = () => {
   // State to potentially refresh the list after a new plan is created
-  const [refreshKey, setRefreshKey] = useState(0);
+  const [refreshKey,  = useState(0);
 
   const handlePlanCreated = (newPlan) => {
     console.log('New plan created:', newPlan);
     // Increment key to trigger re-fetch in LearningPlanList
-    // Note: LearningPlanList currently fetches on mount/page change.
+  
   
     setRefreshKey(prevKey => prevKey + 1);
   };
