@@ -36,7 +36,7 @@ public class LearningProgressController {
         // TODO: Replace @AuthenticationPrincipal String userId with UserPrincipal
         return ResponseEntity.ok(learningProgressService.completeMilestone(progressId, user.getId(), milestoneIndex));
     }
-    test
+    
 
     }
 
