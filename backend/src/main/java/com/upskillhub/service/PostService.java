@@ -283,7 +283,7 @@ public class PostService {
             userRepository.findById(post.getUserId()).ifPresent(user -> {
                 post.setUser(new HashMap<String, String>() {{
                     put("id", user.getId());
-                    
+                    put("name", user.getName());
                     put("profilePicture", user.getProfilePicture());
                 }});
             });
