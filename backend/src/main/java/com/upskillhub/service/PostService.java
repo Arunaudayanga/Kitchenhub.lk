@@ -279,7 +279,7 @@ public class PostService {
         Page<Post> posts = postRepository.findAll(pageable);
         
         // Fetch and set user details for each post
-        //posts.getContent().forEach(post -> {
+        posts.getContent().forEach(post -> {
             userRepository.findById(post.getUserId()).ifPresent(user -> {
                 post.setUser(new HashMap<String, String>() {{
                     put("id", user.getId());
