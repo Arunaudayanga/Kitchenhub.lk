@@ -217,7 +217,17 @@ public class PostService {
         });
 
 
-        
+        // Fetch and set user details for each comment
+        if (updatedPost.getComments() != null) {
+            updatedPost.getComments().forEach(updated_comment -> {
+                userRepository.findById(updated_comment.getUserId()).ifPresent(user -> {
+                    updated_comment.setUser(new HashMap<String, String>() {{
+                        
+                    }});
+                });
+            });
+        }
+
         return updatedPost;
     }
 
