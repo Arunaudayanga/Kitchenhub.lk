@@ -159,8 +159,7 @@ public class PostService {
         
         System.err.println(content);
 
-        Post.Comment comment = new Post.Comment();
-        comment.setId(UUID.randomUUID().toString());
+        
 
         comment.setContent(content);
         comment.setCreatedAt(LocalDateTime.now());
