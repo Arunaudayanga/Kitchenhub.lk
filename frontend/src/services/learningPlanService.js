@@ -37,7 +37,7 @@ const getMyLearningPlans = async (page = 0, size = 10) => {
     });
     return { ...response.data, content: plansWithThumbnails };
   } catch (error) {
-    console.error('Error fetching user learning plans:', error.response?.data || error.message);
+    console.error('Eerro:', error.response?.data || error.message);
     throw error;
   }
 };
