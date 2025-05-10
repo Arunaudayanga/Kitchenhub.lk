@@ -84,7 +84,7 @@ public class PostController {
     
    @DeleteMapping("/{postId}/comments/{commentId}")
     public ResponseEntity<Post> deleteComment(
-            
+            @PathVariable String postId,
             @PathVariable String commentId,
             @AuthenticationPrincipal UserPrincipal userPrincipal) {
         return ResponseEntity.ok(postService.removeComment(postId, commentId, userPrincipal.getId()));
