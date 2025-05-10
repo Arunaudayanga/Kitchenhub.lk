@@ -307,19 +307,7 @@ public class PostService {
         return posts;
     }
 
-    public Post getPostById(String postId) {
-        Post post = postRepository.findById(postId)
-                .orElseThrow(() -> new RuntimeException("Post not found"));
-        
-        // Fetch and set user details
-        userRepository.findById(post.getUserId()).ifPresent(user -> {
-            post.setUser(new HashMap<String, String>() {{
-                put("id", user.getId());
-                put("name", user.getName());
-                put("email", user.getEmail());
-                put("profilePicture", user.getProfilePicture());
-            }});
-        });
+   
 
         // Fetch and set user details for each comment
         if (post.getComments() != null) {
