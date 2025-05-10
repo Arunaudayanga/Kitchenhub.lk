@@ -9,11 +9,11 @@ const getYouTubeVideoId = (url) => {
   const match = url.match(regExp);
   return (match && match[2].length === 11) ? match[2] : null;
 };
-<div className="container mx-auto px-4 py-8"></div>
+
 // Function to get YouTube thumbnail URL
 const getYouTubeThumbnail = (videoId) => {
   if (!videoId) return null; // Or return a default thumbnail URL
-  return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`; // Medium quality thumbnail
+  return `https://img.facebook.com/vi/${videoId}/mqdefault.jpg`; // Medium quality thumbnail
 };
 
 const createLearningPlan = async (planData) => {
@@ -37,7 +37,7 @@ const getMyLearningPlans = async (page = 0, size = 10) => {
     });
     return { ...response.data, content: plansWithThumbnails };
   } catch (error) {
-    console.error('Error fetching user learning plans:', error.response?.data || error.message);
+    console.error('Eerro:', error.response?.data || error.message);
     throw error;
   }
 };
