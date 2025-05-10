@@ -121,7 +121,7 @@ public class LearningProgressService {
         // user.getSkills().remove(progress.getSkillName());
         // userRepository.save(user);
 
-        learningProgressRepository.delete (progress);
+        learningProgressRepository.delete(progress);
     }
 
     public List<LearningProgress> getUserProgress(String userId) {
