@@ -26,7 +26,6 @@ const LearningPlansPage = () => {
           <LearningPlanForm onPlanCreated={handlePlanCreated} />
         </div>
 
-        {/* List of the user's learning plans */}
         {/* Pass the refreshKey to trigger refetch in LearningPlanList */}
         <LearningPlanList refreshTrigger={refreshKey} fetchPublic={false} /> 
 
