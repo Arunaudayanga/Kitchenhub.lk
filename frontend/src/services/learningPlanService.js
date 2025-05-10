@@ -9,7 +9,7 @@ const getYouTubeVideoId = (url) => {
   const match = url.match(regExp);
   return (match && match[2].length === 11) ? match[2] : null;
 };
-
+<div className="container mx-auto px-4 py-8"></div>
 // Function to get YouTube thumbnail URL
 const getYouTubeThumbnail = (videoId) => {
   if (!videoId) return null; // Or return a default thumbnail URL
