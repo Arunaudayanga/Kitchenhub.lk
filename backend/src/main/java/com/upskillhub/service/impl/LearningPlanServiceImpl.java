@@ -21,13 +21,9 @@ public class LearningPlanServiceImpl implements LearningPlanService {
 
     }
 
-    @Override
-    public LearningPlan updatePlan(String planId, LearningPlan plan, String userId) {
-        LearningPlan existingPlan = learningPlanRepository.findById(planId)
-                .orElseThrow(() -> new ResourceNotFoundException("Learning plan not found"));
 
         if (!existingPlan.getUserId().equals(userId)) {
-            throw new UnauthorizedException("You are not authorized to update this plan");
+            throw new UnauthorizedException("You are unauthorized to update this plan");
         }
 
         existingPlan.setTitle(plan.getTitle());
