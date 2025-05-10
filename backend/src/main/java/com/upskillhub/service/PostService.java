@@ -297,7 +297,7 @@ public class PostService {
                             put("id", user.getId());
                             put("name", user.getName());
                             put("email", user.getEmail());
-                            put("profilePicture", user.getProfilePicture());
+    
                         }});
                     });
                 });
