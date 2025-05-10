@@ -161,7 +161,7 @@ public class PostService {
 
         Post.Comment comment = new Post.Comment();
         comment.setId(UUID.randomUUID().toString());
-        comment.setUserId(userId);
+
         comment.setContent(content);
         comment.setCreatedAt(LocalDateTime.now());
         comment.setUpdatedAt(LocalDateTime.now());
