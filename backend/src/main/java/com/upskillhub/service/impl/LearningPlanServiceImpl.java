@@ -8,8 +8,6 @@ import com.upskillhub.security.UserPrincipal;
 import com.upskillhub.service.LearningPlanService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
