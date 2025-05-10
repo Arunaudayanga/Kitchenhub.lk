@@ -27,23 +27,7 @@ public class LearningProgressController {
         return ResponseEntity.ok(learningProgressService.createProgress(user.getId(), progressInput));
     }
 
-    @PutMapping("/{progressId}")
-    public ResponseEntity<LearningProgress> updateProgress(
-            @PathVariable String progressId,
-            @RequestBody LearningProgress progressDetails,
-            @AuthenticationPrincipal UserPrincipal user) {
-        // TODO: Replace @AuthenticationPrincipal String userId with UserPrincipal
-        return ResponseEntity.ok(learningProgressService.updateProgress(progressId, progressDetails, user.getId()));
-    }
-
-    /* @PostMapping("/{progressId}/milestones")
-    public ResponseEntity<LearningProgress> addMilestone(
-            @PathVariable String progressId,
-            @RequestBody LearningProgress.Milestone milestone,
-            @AuthenticationPrincipal UserPrincipal user) {
-        // TODO: Replace @AuthenticationPrincipal String userId with UserPrincipal
-        return ResponseEntity.ok(learningProgressService.addMilestone(progressId, user.getId(), milestone));
-    } */
+ 
 
     @PutMapping("/{progressId}/milestones/{milestoneIndex}/complete")
     public ResponseEntity<LearningProgress> completeMilestone(
