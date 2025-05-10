@@ -18,15 +18,7 @@ import java.util.List;
 public class LearningPlanServiceImpl implements LearningPlanService {
     private final LearningPlanRepository learningPlanRepository;
 
-   /*  @Override
-    public LearningPlan createPlan(String userId, LearningPlan plan) {
-        //String userId = ((UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId();
-        plan.setUserId(userId);
-        plan.setContentUrl(plan.getContentUrl()); // Set contentUrl
-        plan.setTags(plan.getTags()); // Set tags
-        plan.setCreatedAt(LocalDateTime.now());
-        plan.setUpdatedAt(LocalDateTime.now());
-        return learningPlanRepository.save(plan); */
+
     }
 
     @Override
@@ -41,7 +33,7 @@ public class LearningPlanServiceImpl implements LearningPlanService {
         existingPlan.setTitle(plan.getTitle());
         existingPlan.setDescription(plan.getDescription());
         existingPlan.setContentUrl(plan.getContentUrl()); // Update contentUrl
-        existingPlan.setTags(plan.getTags()); // Update tags
+        existingPlan.setTags(plan.getTags()); 
         existingPlan.setTopics(plan.getTopics());
         existingPlan.setUpdatedAt(LocalDateTime.now());
 
