@@ -89,4 +89,4 @@ public class LearningPlanController {
             @AuthenticationPrincipal String userId) {
         return ResponseEntity.ok(learningPlanService.getFollowedPlans(userId));
     }
-}
+}// learning plan
