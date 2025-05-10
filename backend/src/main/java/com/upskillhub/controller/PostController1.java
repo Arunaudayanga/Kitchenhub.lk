@@ -89,6 +89,12 @@ public class PostController {
             @AuthenticationPrincipal UserPrincipal userPrincipal) {
         return ResponseEntity.ok(postService.removeComment(postId, commentId, userPrincipal.getId()));
     }
-    
+     @GetMapping("/user/{userId}")
+    public ResponseEntity<Page<Post>> getUserPosts(
+            @PathVariable String userId,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+        return ResponseEntity.ok(postService.getUserPosts(userId, PageRequest.of(page, size)));
+    }
    
 }
