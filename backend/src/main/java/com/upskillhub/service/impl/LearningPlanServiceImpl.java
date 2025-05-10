@@ -27,7 +27,7 @@ public class LearningPlanServiceImpl implements LearningPlanService {
                 .orElseThrow(() -> new ResourceNotFoundException("Learning plan not found"));
 
         if (!existingPlan.getUserId().equals(userId)) {
-            throw new UnauthorizedException("You are not authorized to update this plan");
+            throw new UnauthorizedException("You are unauthorized to update this plan");
         }
 
         existingPlan.setTitle(plan.getTitle());
