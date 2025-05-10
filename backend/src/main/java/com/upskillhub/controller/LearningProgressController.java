@@ -37,13 +37,6 @@ public class LearningProgressController {
         return ResponseEntity.ok(learningProgressService.completeMilestone(progressId, user.getId(), milestoneIndex));
     }
 
-    @PostMapping("/{progressId}/resources")
-    public ResponseEntity<LearningProgress> addCompletedResource(
-            @PathVariable String progressId,
-            @RequestBody LearningProgress.Resource resource,
-            @AuthenticationPrincipal UserPrincipal user) {
-        // TODO: Replace @AuthenticationPrincipal String userId with UserPrincipal
-        return ResponseEntity.ok(learningProgressService.addCompletedResource(progressId, user.getId(), resource));
     }
 
     @GetMapping
