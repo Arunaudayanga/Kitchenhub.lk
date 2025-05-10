@@ -19,7 +19,7 @@ const LearningPlansPage = () => {
   return (
     // <Layout> {/* Wrap with your Layout component if you have one */} 
       <div className="container mx-auto px-4 py-8">
-     
+     <div className="container mx-auto px-4 py-8"></div>
         
         {/* Form to create a new learning plan */}
         <div className="mb-12">
