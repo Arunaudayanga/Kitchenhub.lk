@@ -82,13 +82,7 @@ public class PostController {
         return ResponseEntity.ok(postService.addComment(postId, userPrincipal.getId(), commentRequest.getContent()));
     }
     
-    @DeleteMapping("/{postId}/comments/{commentId}")
-    public ResponseEntity<Post> deleteComment(
-            @PathVariable String postId,
-            @PathVariable String commentId,
-            @AuthenticationPrincipal UserPrincipal userPrincipal) {
-        return ResponseEntity.ok(postService.removeComment(postId, commentId, userPrincipal.getId()));
-    }
+   
      @GetMapping("/user/{userId}")
     public ResponseEntity<Page<Post>> getUserPosts(
             @PathVariable String userId,
