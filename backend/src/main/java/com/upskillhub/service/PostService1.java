@@ -164,7 +164,7 @@ public class PostService {
 
         comment.setContent(content);
         comment.setCreatedAt(LocalDateTime.now());
-        comment.setUpdatedAt(LocalDateTime.now());
+        
 
         if (post.getComments() == null) {
             post.setComments(new ArrayList<>());
