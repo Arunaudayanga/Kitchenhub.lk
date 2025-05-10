@@ -274,7 +274,20 @@ public class PostService {
         return postRepository.findByTypeOrderByCreatedAtDesc(type, pageable);
     }
 
-   
+    public Page<Post> getAllPosts(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "createdAt"));
+        Page<Post> posts = postRepository.findAll(pageable);
+        
+        // Fetch and set user details for each post
+        posts.getContent().forEach(post -> {
+            userRepository.findById(post.getUserId()).ifPresent(user -> {
+                post.setUser(new HashMap<String, String>() {{
+                    put("id", user.getId());
+                    put("name", user.getName());
+                    put("email", user.getEmail());
+                    put("profilePicture", user.getProfilePicture());
+                }});
+            });
             
             // Fetch and set user details for each comment
             if (post.getComments() != null) {
