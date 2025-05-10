@@ -18,7 +18,7 @@ import java.util.List;
 public class LearningPlanServiceImpl implements LearningPlanService {
     private final LearningPlanRepository learningPlanRepository;
 
-    @Override
+   /*  @Override
     public LearningPlan createPlan(String userId, LearningPlan plan) {
         //String userId = ((UserPrincipal) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId();
         plan.setUserId(userId);
@@ -26,7 +26,7 @@ public class LearningPlanServiceImpl implements LearningPlanService {
         plan.setTags(plan.getTags()); // Set tags
         plan.setCreatedAt(LocalDateTime.now());
         plan.setUpdatedAt(LocalDateTime.now());
-        return learningPlanRepository.save(plan);
+        return learningPlanRepository.save(plan); */
     }
 
     @Override
