@@ -222,7 +222,10 @@ public class PostService {
             updatedPost.getComments().forEach(updated_comment -> {
                 userRepository.findById(updated_comment.getUserId()).ifPresent(user -> {
                     updated_comment.setUser(new HashMap<String, String>() {{
-                        
+                        put("id", user.getId());
+                        put("name", user.getName());
+                        put("email", user.getEmail());
+                        put("profilePicture", user.getProfilePicture());
                     }});
                 });
             });
