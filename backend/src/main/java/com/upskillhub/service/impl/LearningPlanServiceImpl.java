@@ -32,7 +32,7 @@ public class LearningPlanServiceImpl implements LearningPlanService {
 
         existingPlan.setTitle(plan.getTitle());
         existingPlan.setDescription(plan.getDescription());
-        existingPlan.setContentUrl(plan.getContentUrl()); // Update contentUrl
+        existingPlan.setContentUrl(plan.getContentUrl()); 
         existingPlan.setTags(plan.getTags()); 
         existingPlan.setTopics(plan.getTopics());
         existingPlan.setUpdatedAt(LocalDateTime.now());
